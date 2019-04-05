@@ -33,13 +33,15 @@ let app = {
     homepage: document.getElementById('homepage'),
     savedpage: document.getElementById('savedpage'),
     card: document.getElementById('card'),
-    // tiny: new tinyshell(card),
+    tiny:null,
 
 
     init: function () {
+       
         document.addEventListener("deviceready", app.ready);
     },
     ready: function () {
+        app.tiny = new tinyshell(app.card);
         app.addEventListeners();
         app.getCards();
     },
@@ -63,13 +65,13 @@ let app = {
         let id = document.getElementById('avatar').getAttribute('data-id');
         let index = app.cardArr.findIndex(card => card.id == id);
 
-        // app.tiny.addEventListener('swipeleft', app.deleteCard);
-        // app.tiny.addEventListener('swipeleft', app.saveCard);
+        app.tiny.addEventListener('swipeleft', app.deleteCard);
+        app.tiny.addEventListener('swiperight', app.saveCard);
 
 
         //temp code, will be deleted after fixing tinyshell
-        document.getElementById('delete').addEventListener('click', app.deleteCard);
-        document.getElementById('save').addEventListener('click', app.saveCard);
+        // document.getElementById('delete').addEventListener('click', app.deleteCard);
+        // document.getElementById('save').addEventListener('click', app.saveCard);
     },
 
     getCards: function() {
@@ -102,18 +104,20 @@ let app = {
         console.log(index);
         let person = app.cardArr[index];
         document.getElementById('avatar').src = person.imgURL;
-        document.getElementById('avatar').setAttribute('data-id', person.id);
+        document.getElementById('card').setAttribute('data-id', person.id);
         document.getElementById('name').textContent = `${person.firstName} ${person.lastName}`; 
 
         //temp solution
-        document.getElementById('save').setAttribute('data-id', person.id);
-        document.getElementById('delete').setAttribute('data-id', person.id);
+        // document.getElementById('save').setAttribute('data-id', person.id);
+        // document.getElementById('delete').setAttribute('data-id', person.id);
     },
 
     deleteCard: function(ev) {
+        console.log(ev.target);
         let id = ev.target.getAttribute('data-id');
         let index = app.cardArr.findIndex(card => card.id == id);
         app.cardArr.splice(index, 1);
+        console.log(index);
         app.displayCard(index);
         console.log(app.cardArr);
         if (app.cardArr.length < 3) {
@@ -123,6 +127,7 @@ let app = {
     },
 
     saveCard: function(ev) {
+        console.log(ev.target);
         let id = ev.target.getAttribute('data-id');
         let index = app.cardArr.findIndex(card => card.id == id);
         let card = app.cardArr.find(card => card.id == id);

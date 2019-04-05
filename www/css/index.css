@@ -68,10 +68,18 @@ h1 {
     text-align: center;
 }
 
+#card {
+    width: 90%;
+    border: 1px black solid;
+    margin: 0 auto;
+    display: block;
+    background-color: lightyellow;
+}
+
 #avatar {
     display: block;
     text-align: center;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 #name {
