@@ -30,40 +30,47 @@
         -->
         <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://griffis.edumedia.ca 'unsafe-eval' 'unsafe-inline'; 
-        style-src 'self' 'unsafe-inline'; 
+        style-src 'self' https://fonts.googleapis.com; 
+        font-src 'self' https://fonts.gstatic.com;
         media-src *; 
         img-src *;">
-        <!-- img-src 'self' 'unsafe-eval' 'unsafe-inline' data: content:;"> -->
 
         <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <!-- <link rel="stylesheet" type="text/css" href="css/tinyshell.css"> -->
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Teko" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <title>Tundra</title>
     </head>
     <body>
         <div class="header">
+            <img id="heart" src="./img/pToaXr9TE.png" height=40px alt="">
             <h1>Tundra Dating</h1>
         </div>
         <div id="homepage">
             <div id="card">
-                <img id="avatar" src="" alt="avatar">
-                <p id="name"></p>
-                <!-- <div id="buttons">
-                    <button id="delete">Delete</button>
-                    <button id="save">Save</button>
-                </div> -->
+                <div id="content">
+                    <img id="avatar" src="" alt="avatar">
+                    <p id="name"></p>
+                </div>
             </div>
         </div>
         <div id="savedpage" class="hide">
             <ul id="saved"></ul>
         </div>
-        <div id="tabs">
-            <div id="hometab">Home</div>
-            <div id="savedtab">Saved</div>
+        <div class="tabs">
+            <div class="hometab selected">Home</div>
+            <div class="savedtab">Saved</div>
         </div>
+        <div class="overlay hide" id="deleteMsg">
+            <p class="msg">Profile Rejected</p>
+        </div>
+        <div class="overlay hide" id="saveMsg">
+            <p class="msg">Profile Saved</p>
+        </div>
+        
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/tinyshell-min.js"></script>
         <script type="text/javascript" src="js/index.js"></script>

@@ -39,7 +39,7 @@
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/tinyshell.css">
+        <!-- <link rel="stylesheet" type="text/css" href="css/tinyshell.css"> -->
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <title>Tundra</title>
     </head>
@@ -61,9 +61,16 @@
             <ul id="saved"></ul>
         </div>
         <div id="tabs">
-            <div id="hometab">Home</div>
+            <div id="hometab" class="selected">Home</div>
             <div id="savedtab">Saved</div>
         </div>
+        <div class="overlay hide" id="deleteMsg">
+            <p class="msg">Profile Rejected</p>
+        </div>
+        <div class="overlay hide" id="saveMsg">
+            <p class="msg">Profile Saved</p>
+        </div>
+        
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/tinyshell-min.js"></script>
         <script type="text/javascript" src="js/index.js"></script>

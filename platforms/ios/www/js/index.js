@@ -50,15 +50,15 @@ let app = {
     addEventListeners: function() {
         app.hometab.addEventListener('click', function(){
             app.homepage.classList.remove('hide');
-            app.homepage.classList.add('selected');
+            app.hometab.classList.add('selected');
             app.savedpage.classList.add('hide');
-            app.savedpage.classList.remove('selected');
+            app.savedtab.classList.remove('selected');
         });
         app.savedtab.addEventListener('click', function(){
             app.homepage.classList.add('hide');
-            app.homepage.classList.remove('selected');
+            app.hometab.classList.remove('selected');
             app.savedpage.classList.remove('hide');
-            app.savedpage.classList.add('selected');
+            app.savedtab.classList.add('selected');
             app.showSaved();
         });
 
@@ -124,6 +124,10 @@ let app = {
             app.getCards();
         } 
         console.log(app.cardArr);
+        document.getElementById('deleteMsg').classList.remove('hide');
+        setTimeout(() => {
+            document.getElementById('deleteMsg').classList.add('hide');
+        }, 1000);
     },
 
     saveCard: function(ev) {
@@ -138,6 +142,10 @@ let app = {
         if (app.cardArr.length < 3) {
             app.getCards();
         } 
+        document.getElementById('saveMsg').classList.remove('hide');
+        setTimeout(() => {
+            document.getElementById('saveMsg').classList.add('hide');
+        }, 1000);
     },
 
     showSaved: function() {
