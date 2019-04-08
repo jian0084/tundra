@@ -28,8 +28,8 @@ let app = {
     KEY: "key",
     sessionList: [],
 
-    hometab: document.getElementById('hometab'),
-    savedtab: document.getElementById('savedtab'),
+    hometab: document.querySelector('.hometab'),
+    savedtab: document.querySelector('.savedtab'),
     homepage: document.getElementById('homepage'),
     savedpage: document.getElementById('savedpage'),
     card: document.getElementById('card'),

@@ -17,8 +17,11 @@
  * under the License.
  */
 
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Teko');
+
 body {
-    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    /* font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif; */
+    font-family: Teko, Arial, Helvetica, sans-serif;
     font-size:12px;
     height:100%;
     margin:0px;
@@ -32,49 +35,73 @@ body {
 
 /* Portrait layout (default) */
 .header {
+    position: sticky;
+    top: 0;
     background-color: #eee;
     text-align:center;
-    margin:0px;  /* offset vertical: half of image height and text area height */
+    margin:0px;
+}
+
+#heart {
+    display: inline;
+    margin: 10px;
+    vertical-align: middle;
 }
 
 h1 {
-    font-size:24px;
+    display: inline-block;
+    font-size:32px;
     font-weight:normal;
-    overflow:visible;
-    padding:20px;
     text-align:center;
     margin: 0 0 20px 0;
+    vertical-align: text-top;
+    font-family: 'Dancing Script', 'Times New Roman', Times, serif;
 }
 
-#hometab,
-#savedtab
-{
-    font-size: 17px;
-    display: inline-block;
-    padding: 1rem;
-    border: solid 1px black;
-    margin: 0; 
-    width: 40%;
-}
-
-.selected {
-    color: blue;
-}
-
-#tabs {
+.tabs {
     width: 100%;
     position: absolute;
     bottom: 0; 
     text-align: center;
 }
 
+.hometab,
+.savedtab
+{
+    font-size: 20px;
+    display: inline-block;
+    padding: 1rem;
+    margin: 0; 
+    width: 41.2%;
+    background-color: #e8eaf6;
+    color:#555;
+}
+
+.selected {
+    color: #4a148c;
+    background-color:#e1bee7;
+}
+
+
+
+#content {
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    display: block;
+    /* margin: auto; */
+    text-align: center;
+}
+
 #card {
     width: 90%;
-    border: 1px black solid;
+    height: 60%;
     margin: 0 auto;
     display: block;
-    height: 60%;
-    background-color: lightyellow;
+    background-color: #ede7f6;
+    position: absolute;
+    top: 20%;
+    left: 5%;
 }
 
 #avatar {
@@ -86,7 +113,9 @@ h1 {
 #name {
     display: block;
     text-align: center;
-    font-size: 17px;
+    margin: 20px;
+    font-size: 20px;
+    font-family: Teko, Arial, Helvetica, sans-serif;
 }
 
 #buttons {
@@ -105,23 +134,22 @@ h1 {
 }
 
 .entry {
-    display: grid;
+    /* display: grid; */
     width: 90%;
     margin: 5%;
     background-color: #fff;
-    height: 50px;
+    height: 100px;
 }
 
 .grid {
-    font-size: 1rem;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(3, auto); 
     grid-gap: 3px;
-    margin: 10px;
-    /* border-bottom-style: solid;
+    /* margin: 10px; */
+    border-bottom-style: solid;
     border-bottom-width: 1px;
-    border-bottom-color: #eee; */
+    border-bottom-color: #eee;
 }
 
 .item1 {
@@ -138,7 +166,7 @@ h1 {
 .item2 {
     grid-column: 3 / span 4;
     grid-row: 2 / 3;
-    font-size: 20px;
+    font-size: 24px;
     color: #515C6F;
     font-weight: bold;
     margin: 4px;
@@ -169,12 +197,10 @@ h1 {
 }
 
 .msg {
-    color: coral;
-    font-size: 24px;
-    /* position: absolute; */
+    color: #81d4fa;
+    font-size: 50px;
     display: block;
-    margin: 100px auto;
-    /* top: 50%;
-    left: 50%; */
+    margin: 200px auto;
     text-align:center;
 }
+

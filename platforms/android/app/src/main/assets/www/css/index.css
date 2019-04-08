@@ -35,6 +35,8 @@ body {
 
 /* Portrait layout (default) */
 .header {
+    position: sticky;
+    top: 0;
     background-color: #eee;
     text-align:center;
     margin:0px;
@@ -58,7 +60,7 @@ h1 {
 
 .tabs {
     width: 100%;
-    position: absolute;
+    position: fixed;
     bottom: 0; 
     text-align: center;
 }
