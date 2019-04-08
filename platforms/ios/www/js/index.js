@@ -41,6 +41,7 @@ let app = {
         document.addEventListener("deviceready", app.ready);
     },
     ready: function () {
+        StatusBar.hide();
         app.tiny = new tinyshell(app.card);
         app.addEventListeners();
         app.getCards();

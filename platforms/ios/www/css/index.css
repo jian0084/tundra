@@ -35,6 +35,7 @@ body {
 
 /* Portrait layout (default) */
 .header {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     background-color: #eee;
@@ -60,7 +61,7 @@ h1 {
 
 .tabs {
     width: 100%;
-    position: absolute;
+    position: fixed;
     bottom: 0; 
     text-align: center;
 }
@@ -68,7 +69,7 @@ h1 {
 .hometab,
 .savedtab
 {
-    font-size: 20px;
+    font-size: 28px;
     display: inline-block;
     padding: 1rem;
     margin: 0; 
@@ -84,12 +85,11 @@ h1 {
 
 
 
-#content {
+/* #content {
     position: absolute;
     top: 10%;
     left: 25%;
     display: block;
-    /* margin: auto; */
     text-align: center;
 }
 
@@ -102,6 +102,21 @@ h1 {
     position: absolute;
     top: 20%;
     left: 5%;
+} */
+
+
+#card {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    background-color: #ede7f6;
+    top: 10%;
+    left: 25%;
+    text-align: center;
+    width: 90%;
+    height: 60%;
+    /* top: 20%;
+    left: 5%; */
 }
 
 #avatar {
@@ -114,7 +129,7 @@ h1 {
     display: block;
     text-align: center;
     margin: 20px;
-    font-size: 20px;
+    font-size: 32px;
     font-family: Teko, Arial, Helvetica, sans-serif;
 }
 

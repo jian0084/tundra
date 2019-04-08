@@ -41,6 +41,7 @@ let app = {
         document.addEventListener("deviceready", app.ready);
     },
     ready: function () {
+        StatusBar.hide();
         app.tiny = new tinyshell(app.card);
         app.addEventListeners();
         app.getCards();
@@ -114,6 +115,11 @@ let app = {
 
     deleteCard: function(ev) {
         console.log(ev.target);
+        let div = ev.currentTarget;
+        div.classList.add("goleft");
+        setTimeout(() => {
+            div.classList.remove('goleft');
+        }, 500);
         let id = ev.target.getAttribute('data-id');
         let index = app.cardArr.findIndex(card => card.id == id);
         app.cardArr.splice(index, 1);
@@ -132,6 +138,11 @@ let app = {
 
     saveCard: function(ev) {
         console.log(ev.target);
+        let div = ev.currentTarget;
+        div.classList.add("goright");
+        setTimeout(() => {
+            div.classList.remove('goright');
+        }, 500);
         let id = ev.target.getAttribute('data-id');
         let index = app.cardArr.findIndex(card => card.id == id);
         let card = app.cardArr.find(card => card.id == id);

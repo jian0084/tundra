@@ -18,6 +18,7 @@
 		6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */; };
 		75CE7004BFC047EDA0068C9A /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E02E05F291478F90D05BB7 /* CDVSplashScreen.m */; };
 		778381E45E7F4FE98FC9BD44 /* CDVNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D576CD88A247B686185830 /* CDVNotification.m */; };
+		889A10153DDC44288ED09BE4 /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9908721C31475B9E003FB3 /* CDVStatusBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = jian0084/config.xml; sourceTree = "<group>"; };
+		8F9908721C31475B9E003FB3 /* CDVStatusBar.m */ = {isa = PBXFileReference; name = "CDVStatusBar.m"; path = "cordova-plugin-statusbar/CDVStatusBar.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		3AA7A42F463F4DF3940DD9A2 /* CDVStatusBar.h */ = {isa = PBXFileReference; name = "CDVStatusBar.h"; path = "cordova-plugin-statusbar/CDVStatusBar.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +189,8 @@
 				D61CEF2846054E878CAF75DA /* CDVViewController+SplashScreen.h */,
 				90D576CD88A247B686185830 /* CDVNotification.m */,
 				2FD7B1037D544F919F65DF25 /* CDVNotification.h */,
+				8F9908721C31475B9E003FB3 /* CDVStatusBar.m */,
+				3AA7A42F463F4DF3940DD9A2 /* CDVStatusBar.h */,
 			);
 			name = Plugins;
 			path = jian0084/Plugins;
@@ -317,6 +322,7 @@
 				75CE7004BFC047EDA0068C9A /* CDVSplashScreen.m in Sources */,
 				392B4623C2F149ED8933853D /* CDVViewController+SplashScreen.m in Sources */,
 				778381E45E7F4FE98FC9BD44 /* CDVNotification.m in Sources */,
+				889A10153DDC44288ED09BE4 /* CDVStatusBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
